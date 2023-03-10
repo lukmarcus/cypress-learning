@@ -2,13 +2,11 @@
 
 describe("Test Contact Us for via WebdriverUni", () => {
     it("Should be able to open contact us form", () => {
-        //cypress code
             //cy.visit('https://webdriveruniversity.com/')
             //cy.get('#contact-us').click({force: true})
     })
 
     it("Should be able to submit a successful submission via contact us form", () => {
-        //cypress code
             cy.visit('https://webdriveruniversity.com/Contact-Us/contactus.html')
             cy.get('input[name="first_name"]').type('Jan')
             cy.get('input[name="last_name"]').type('Kowalski')
