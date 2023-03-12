@@ -9,6 +9,8 @@
   "author": "Marek Szumny",
   "license": "ISC",
   "devDependencies": {
+    "@cypress/xpath": "^2.0.3",
+    "@types/cypress": "^1.1.3",
     "cypress": "^12.6.0"
   }
 }
