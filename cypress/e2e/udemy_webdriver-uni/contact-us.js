@@ -8,6 +8,9 @@ describe("Test Contact Us for via WebdriverUni", () => {
 
     it("Should be able to submit a successful submission via contact us form", () => {
             cy.visit('https://webdriveruniversity.com/Contact-Us/contactus.html')
+            cy.document().should('have.property', 'charset').and('eq', 'UTF-8')
+            cy.title().should('eq','WebDriver | Contact Us')
+            cy.url().should('include', 'contactus')
             cy.get('input[name="first_name"]').should('have.attr', 'placeholder', 'First Name')
             cy.get('input[name="first_name"]').type('Jan')
             cy.get('input[name="last_name"]').should('have.attr', 'placeholder', 'Last Name')
