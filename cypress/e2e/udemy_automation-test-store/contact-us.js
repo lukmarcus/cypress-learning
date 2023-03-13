@@ -1,5 +1,7 @@
 /// <reference types='cypress' />
 
+// not important change, just to force github to show this file in diff.
+
 describe('Test Contact Us for via Automation Test Store', () => {
     it('Submit a successful submission via contact us form and go back to front page', () => {
         cy.visit('https://automationteststore.com/')
