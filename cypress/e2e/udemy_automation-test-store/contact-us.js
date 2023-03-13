@@ -1,5 +1,4 @@
 /// <reference types="cypress" />
-/// <reference types="cypress-xpath" />
 
 describe("Test Contact Us for via Automation Test Store", () => {
     it.only("Should be able to submit a successful submission via contact us form and go back to front page", () => {
