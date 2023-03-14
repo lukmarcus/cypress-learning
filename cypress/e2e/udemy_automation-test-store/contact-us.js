@@ -1,21 +1,22 @@
 /// <reference types='cypress' />
 
 describe('Test Contact Us for via Automation Test Store', () => {
-    it('Submit a successful submission via contact us form and go back to front page', () => {
+    it('Should submit a successful submission via contact us form and go back to front page', () => {
         cy.visit('https://automationteststore.com/')
         cy.get('a[href$="contact"]')
             .click()
+            .invoke('text')
+            .then((text) => {
+                cy.log(`Button text is: ${text}`)
+          })
         cy.get('#ContactUsFrm_first_name')
             .should('have.attr', 'name', 'first_name')
-        cy.get('#ContactUsFrm_first_name')
             .type('Jan')
         cy.get('#ContactUsFrm_email')
             .should('have.attr', 'name', 'email')
-        cy.get('#ContactUsFrm_email')
             .type('jan@kowalski.pl')
         cy.get('#ContactUsFrm_enquiry')
             .should('have.attr', 'name', 'enquiry')
-        cy.get('#ContactUsFrm_enquiry')
             .type('Enquiry from Jan Kowalski')
         cy.get('button[title="Submit"]')
             .click()
@@ -25,9 +26,10 @@ describe('Test Contact Us for via Automation Test Store', () => {
             .click()
         cy.url()
             .should('eq', 'https://automationteststore.com/')
+        cy.log('Test has completed!')
     })
 
-    it('No successful submission via contact form without any inputs and see eror messages', () => {
+    it('Should not submit successful submission via contact form without any inputs, should see eror messages', () => {
         cy.visit('https://automationteststore.com/')
         cy.get('a[href$="contact"]')
             .click()
