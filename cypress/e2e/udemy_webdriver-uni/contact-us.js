@@ -1,8 +1,9 @@
 /// <reference types='cypress' />
+Cypress.config('baseUrl', 'https://webdriveruniversity.com');
 
 describe('Test Contact Us form via WebdriverUni', () => {
     it('Should submit a successful submission via contact us form', () => {
-        cy.visit('https://webdriveruniversity.com/Contact-Us/contactus.html')
+        cy.visit('/Contact-Us/contactus.html')
         cy.document()
             .should('have.property', 'charset')
             .and('eq', 'UTF-8')
@@ -29,9 +30,7 @@ describe('Test Contact Us form via WebdriverUni', () => {
     })
 
     it('Should not submit successful submission via contact us form without any information', () => {
-        cy.visit('https://webdriveruniversity.com/Contact-Us/contactus.html')
-        cy.get('a[href$="contact"]')
-            .click()
+        cy.visit('/Contact-Us/contactus.html')
         cy.get('input[type="submit"]')
             .click()
         cy.get('body')
