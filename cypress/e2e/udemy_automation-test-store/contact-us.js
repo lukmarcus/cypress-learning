@@ -1,6 +1,6 @@
 /// <reference types='cypress' />
 
-describe('Test Contact Us for via Automation Test Store', () => {
+describe('Test Contact Us form on Automation Test Store', () => {
     it('Should submit a successful submission via contact us form and go back to front page', () => {
         cy.visit('https://automationteststore.com/')
         cy.get('a[href$="contact"]')
@@ -8,7 +8,7 @@ describe('Test Contact Us for via Automation Test Store', () => {
             .invoke('text')
             .then((text) => {
                 cy.log(`Button text is: ${text}`)
-          })
+            })
         cy.get('#ContactUsFrm_first_name')
             .should('have.attr', 'name', 'first_name')
             .type('Jan')
