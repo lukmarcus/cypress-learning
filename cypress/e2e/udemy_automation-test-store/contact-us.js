@@ -1,8 +1,9 @@
 /// <reference types='cypress' />
+Cypress.config('baseUrl', 'https://automationteststore.com');
 
 describe('Test Contact Us form on Automation Test Store', () => {
     it('Should submit a successful submission via contact us form and go back to front page', () => {
-        cy.visit('https://automationteststore.com/')
+        cy.visit('/')
         cy.get('a[href$="contact"]')
             .click()
             .invoke('text')
@@ -30,7 +31,7 @@ describe('Test Contact Us form on Automation Test Store', () => {
     })
 
     it('Should not submit successful submission via contact form without any inputs, should see eror messages', () => {
-        cy.visit('https://automationteststore.com/')
+        cy.visit('/')
         cy.get('a[href$="contact"]')
             .click()
         cy.get('button[title="Submit"]')
