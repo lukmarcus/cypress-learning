@@ -2,5 +2,4 @@ cypress/results/*
 cypress/reports/*
 cypress/screenshots/*
 cypress/videos/*
-cypress/e2e/z_examples/
 node_modules/
