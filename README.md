@@ -10,6 +10,9 @@
 ### [Workshop: Head-to-Head Web Testing: Part 1 with Cypress (Test Automation University Conference 2023)](https://applitools.com/event/workshop-head-to-head-web-testing-part-1-with-cypress/)
 - [Trello clone app](https://github.com/filiphric/how-to-start-with-cypress) - [exercises](/cypress/e2e/trelloCloneApp/)
 
+### [Real World Testing with Cypress - Testing Your First Application](https://learn.cypress.io/testing-your-first-application)
+- [cypress-realworld-testing-course-app](https://github.com/cypress-io/cypress-realworld-testing-course-app/tree/start) - [exercises](/cypress/e2e/cypressCourseApp/)
+
 ## Additional info
 ### Open Cypress
 - `./node_modules/.bin/cypress open`
